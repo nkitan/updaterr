@@ -7,5 +7,7 @@ more managers are gonna be added soon.
 -USAGE-
 --------
 cd updaterr/
+
 chmod +X updaterr.sh
+
 sudo sh updaterr.sh

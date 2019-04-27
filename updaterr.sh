@@ -66,7 +66,8 @@ fi
 
 while [[ true ]]; do
   case $answer in
-    [yY]* ) echo "Shutting Down!";
+    [yY]* ) echo "Shutting Down!"
+    sleep 10
     
     echo "Shutdown! @" >> logfile.txt 
     TIME=$(date +'%m/%d/%Y/%T')

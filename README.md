@@ -6,8 +6,8 @@ more managers are gonna be added soon. creates a log file with timestamps,asks i
 
 -USAGE-
 --------
-.cd updaterr/
+. cd updaterr/
 
-.chmod +X updaterr.sh
+. chmod +X updaterr.sh
 
-.sudo sh updaterr.sh
+. sudo sh updaterr.sh

@@ -11,7 +11,7 @@ more managers are gonna be added soon. creates a log file with timestamps,asks i
 
 -USAGE-
 --------
- ~$ cd updaterr/
+-> cd updaterr/
 
 2. chmod +X updaterr.sh
 

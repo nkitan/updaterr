@@ -1,34 +1,34 @@
-function upd {                                                                
+function upd {
 sudo apt -y update
 echo "updated"
 }
- 
-function upgd {                                                                     
+
+function upgd {
 sudo apt -y upgrade
 echo "upgraded"
 }
 
-function distupgd {                                                                 
+function distupgd {
 sudo apt -y dist-upgrade
 echo "dist upgraded"
 }
 
-read -p "Do you want a log file? " logwt    
+read -p "Do you want a log file? " logwt
 clear
 
-read -p "Do you want to shutdown after the script finishes its work? " answer       
+read -p "Do you want to shutdown after the script finishes its work? " answer
 clear
 
 upd
-let RETVAL=$?                                             
+let RETVAL=$?
 until [[ $RETVAL == 0 ]] ; do
 upd
 let RETVAL=$?
 done
 
-if [[ $logwt == 'y' ]]; then
+if [ $logwt == 'y' ] && [ $RETVAL == 0 ]; then
 touch logfile.txt
-echo "updated @" >> logfile.txt                                                  
+echo "updated @" >> logfile.txt
 TIME=$(date +'%m/%d/%Y/%T')
 echo $TIME >> logfile.txt
 echo "----" >> logfile.txt
@@ -41,8 +41,7 @@ upgd
 let RETVAL=$?
 done
 
-if [[ $logwt == 'y' ]]; then
-touch logfile.txt
+if [ $logwt == 'y' ] && [ $RETVAL == 0 ]; then
 echo "upgraded @ " >> logfile.txt
 TIME=$(date +'%m/%d/%Y/%T')
 echo $TIME >> logfile.txt
@@ -56,32 +55,30 @@ distupgd
 let RETVAL=$?
 done
 
-if [[ $logwt == 'y' ]]; then
-touch logfile.txt
+if [ $logwt == 'y' ] && [ $RETVAL == 0 ]; then
 echo "Finish : " >> logfile.txt
 TIME=$(date +'%m/%d/%Y/%T')
 echo $TIME >> logfile.txt
 echo "----" >> logfile.txt
+echo "END OF UPDATE" >> logfile.txt
 fi
 
 while [[ true ]]; do
   case $answer in
     [yY]* ) echo "Shutting Down!"
-    sleep 10
-    
-    echo "Shutdown! @" >> logfile.txt 
+    echo "Shutdown! @" >> logfile.txt
     TIME=$(date +'%m/%d/%Y/%T')
     echo $TIME >> logfile.txt
-    
+    echo "--------------------------------------" >> logfile.txt
+    sleep 10
     shutdown now
     break;;
 
     [nN]* ) echo "Done!"
-     echo "END OF UPDATE"  >> logfile.txt 
     break;;
-    
-    
-    
+
+
+
     *) echo "Invalid Option"; break;;
   esac
 done

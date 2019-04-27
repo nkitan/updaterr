@@ -67,12 +67,20 @@ fi
 while [[ true ]]; do
   case $answer in
     [yY]* ) echo "Shutting Down!";
+    
+    echo "Shutdown! @" >> logfile.txt 
+    TIME=$(date +'%m/%d/%Y/%T')
+    echo $TIME >> logfile.txt
+    
     shutdown now
     break;;
 
     [nN]* ) echo "Done!"
+     echo "END OF UPDATE"  >> logfile.txt 
     break;;
-
+    
+    
+    
     *) echo "Invalid Option"; break;;
   esac
 done

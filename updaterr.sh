@@ -13,9 +13,10 @@ sudo apt -y dist-upgrade
 echo "dist upgraded"
 }
 
-read -p "Do you want a log file?" logwt                                                           
+read -p "Do you want a log file? " logwt    
+clear
 
-read -p "Do you want to shutdown after the script finishes its work?" answer       
+read -p "Do you want to shutdown after the script finishes its work? " answer       
 clear
 
 upd

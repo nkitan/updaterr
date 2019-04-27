@@ -1,30 +1,21 @@
-//This is a bash script to update/upgrade your debian based distro!
-//Proper update with shutdown at end of script
-//Creates a log with Timestamps
-//Always being Developed
-
-
-
-function upd {                                                                  //Updates List
+function upd {                                                                
 sudo apt -y update
 echo "updated"
 }
  
-function upgd {                                                                     //Upgrades Packages
+function upgd {                                                                     
 sudo apt -y upgrade
 echo "upgraded"
 }
 
-function distupgd {                                                                 //Function For Upgrading Distro
+function distupgd {                                                                 
 sudo apt -y dist-upgrade
 echo "dist upgraded"
 }
 
-//ENTRY POINT
+read -p "Do you want a log file?" logwt                                                           
 
-read -p "Do you want a log file?" logwt                                            //Added Option to Write/Ignore Logs                   
-
-read -p "Do you want to shutdown after the script finishes its work?" answer       //Added Optional Shutdown Functionality
+read -p "Do you want to shutdown after the script finishes its work?" answer       
 clear
 
 upd

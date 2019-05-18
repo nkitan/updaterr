@@ -11,6 +11,16 @@ more managers are gonna be added soon. creates a log file with timestamps,asks i
 
 -USAGE-
 --------
+
+RUN EXECUTABLE
+---------------
+1. > cd updaterr/
+
+2. > ./updaterr
+
+BULD IT YOURESELF
+-----------------
+
 1.  > cd updaterr/
 
 2.  > chmod +X updaterr.sh

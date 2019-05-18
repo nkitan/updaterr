@@ -13,11 +13,21 @@ sudo apt -y dist-upgrade
 echo "dist upgraded"
 }
 
-read -p "Do you want a log file? " logwt
+read -t 5 -p "Do you want a log file? " logwt
 clear
+let answer=k
+read -t 5 -p "Do you want to shutdown after the script finishes its work? " answer
 
-read -p "Do you want to shutdown after the script finishes its work? " answer
-clear
+if [[ answer == 'k' ]]; then
+sleep 10
+echo "Default Option Chosen as no User Input for 10 seconds"
+let answer = 'n'
+fi
+
+if [[ $1 == 1 ]]; then
+  let answer=n
+  let logwt=y
+fi
 
 upd
 let RETVAL=$?

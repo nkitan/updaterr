@@ -20,8 +20,8 @@ Just the essentials.
 Follow these instructions to get your script up and running in no time
 
 1. > cd updaterr/
-
-2. > ./updaterr
+2. > chmod +x updaterr.sh
+3. > ./updaterr.sh
 
 BULD IT YOURESELF
 -----------------

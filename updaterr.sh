@@ -1,22 +1,40 @@
 function upd {
-sudo apt -y update
-echo "updated"
+if [[ $pkm == 1 ]]; then  
+ sudo apt -y update
+ echo "updated using apt"
+elif [[ $pkm == 2 ]]; then
+ sudo pacman -Sy
+ echo "updated usinc pacman" 
+fi
+
 }
 
 function upgd {
-sudo apt -y upgrade
-echo "upgraded"
+if [[ $pkm == 1 ]]; then  
+ sudo apt -y upgrade
+ echo "upgraded using apt"
+elif [[ $pkm == 2 ]]; then
+ sudo pacman -Syu
+ echo "upgraded usinc pacman" 
+fi
+
 }
 
 function distupgd {
-sudo apt -y dist-upgrade
-echo "dist upgraded"
+if [[ $pkm == 1 ]]; then  
+ sudo apt -y update
+ echo "updated using apt"
+elif [[ $pkm == 2 ]]; then
+ echo "dist usinc pacman" 
+fi
 }
 
 read -t 5 -p "Do you want a log file? " logwt
 clear
 let answer=k
 read -t 5 -p "Do you want to shutdown after the script finishes its work? " answer
+echo "1.APT 2.PACMAN"
+read -t 5 -p "package manager? " pkm
 
 if [[ answer == 'k' ]]; then
 sleep 10

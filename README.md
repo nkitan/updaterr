@@ -10,18 +10,18 @@ more managers are gonna be added soon. creates a log file with timestamps,asks i
 * works with your favourite debian (apt) based distro
 * supports automation by passing arguments during call
 
--USAGE-
+## USAGE
 --------
 
-RUN EXECUTABLE
+## RUN EXECUTABLE
 ---------------
 
 Just the essentials. 
 Follow these instructions to get your script up and running in no time
 
-1. > cd updaterr/
-2. > chmod +x updaterr.sh
-3. > ./updaterr.sh
+1.  `cd updaterr/`
+2.  `chmod +x updaterr.sh`  
+3.  `./updaterr.sh`  
 
 BULD IT YOURESELF
 -----------------
@@ -31,11 +31,11 @@ The Possibilties are Endless.
 
 after you're done editing the script, proceed to the following steps.
 
-1.  > cd updaterr/
+1.  `cd updaterr/`
 
-2.  > chmod +X updaterr.sh
+2.  `chmod +X updaterr.sh`
 
-3.  > sudo sh updaterr.sh
+3.  `sudo sh updaterr.sh`
 
 
 PASSING ARGUMENTS
